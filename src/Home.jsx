@@ -8,7 +8,7 @@ import SnackBar from "./components/SnackBar";
 
 const Home = () => {
   const data = {
-    name: "Shopzy",
+    name: "Share N Shop",
   };
   return (
     <>

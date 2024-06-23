@@ -116,12 +116,13 @@ const NavWrapper = styled.nav`
       font-size: 1.8rem;
       font-weight: 500;
       text-transform: uppercase;
-      color: ${({ theme }) => theme.colors.black};
+      // color: ${({ theme }) => theme.colors.white};
+      color: #E6e6fa;
       transition: color 0.3s linear;
 
       &:hover,
       &:active {
-        color: ${({ theme }) => theme.colors.helper};
+        color: ${({ theme }) => theme.colors.white};
       }
     }
   }
@@ -130,7 +131,7 @@ const NavWrapper = styled.nav`
     display: none;
     background-color: transparent;
     cursor: pointer;
-    border: none;
+    border: solid 2px  black;
   }
 
   .mobile-nav-icon[name="close-outline"] {
