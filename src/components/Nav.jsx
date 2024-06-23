@@ -64,7 +64,10 @@ const Nav = () => {
               className="navbar-link"
               onClick={() => setMenuIcon(false)}
             >
-                {(JSON.parse(localStorage.getItem("StoreUser")).name).toUpperCase()}
+                  {
+                    JSON.parse(localStorage.getItem("StoreUser")).name ?
+                    (JSON.parse(localStorage.getItem("StoreUser")).name).toUpperCase() : ""
+                    }
             </NavLink>
               </li>
               <li className="cp navbar-link" onClick={() => getLogOut()}>
@@ -131,7 +134,7 @@ const NavWrapper = styled.nav`
     display: none;
     background-color: transparent;
     cursor: pointer;
-    border: solid 2px  black;
+
   }
 
   .mobile-nav-icon[name="close-outline"] {
@@ -152,6 +155,9 @@ const NavWrapper = styled.nav`
         font-size: 4.2rem;
         color: ${({ theme }) => theme.colors.black};
       }
+ 
+
+
     }
 
     .active .mobile-nav-icon {
@@ -195,6 +201,7 @@ const NavWrapper = styled.nav`
 
       .navbar-link {
         font-size: 2.8rem; /* Adjust font size as needed */
+        color: #000;
       }
     }
   }

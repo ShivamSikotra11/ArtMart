@@ -27,10 +27,13 @@ export const UserContextProvider = ({ children }) => {
           'store-name': 'shivam'
         }
       });
-      const { userId,name,referral_code} = response.data;
+      const { userId } = response.data;
+      // const user = getUserAPI(userId, formData.password);
+      // const { name, referral_code } = user;
+      // console.log(response.data);
       dispatch({type:"SET_SNACKBAR",payload:[true,`Your userID is ${userId}(Keep Remember)`]})
-      dispatch({type:"ALTER_LOGIN",payload:{userId,password:formData.password,name,referral_code}});
-      redirect("/"); 
+      dispatch({type:"ALTER_LOGIN",payload:{userId,password:formData.password,name:formData.firstName + " " + formData.lastName}});
+      // redirect("/"); 
     } catch (error) {
       console.error('There was an error registering the user!', error);
       alert('Registration failed');

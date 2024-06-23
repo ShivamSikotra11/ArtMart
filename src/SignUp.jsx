@@ -150,7 +150,7 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              color='secondary'
+              color="secondary"
             >
               Sign Up
             </Button>
